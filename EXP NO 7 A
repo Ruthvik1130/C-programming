@@ -1,0 +1,50 @@
+/* NAME: RUTHVIK KUNDAR 
+BRANCH/YEAR: Computer Engineering/F.E
+UIN: 251P130
+ROLL NO: 52
+DIV: D */
+#include <stdio.h>
+
+// Function to add two 2x2 matrices
+void addMatrix(int mat1[2][2], int mat2[2][2], int sum[2][2]) {
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            sum[i][j] = mat1[i][j] + mat2[i][j];
+        }
+    }
+}
+
+int main() {
+    int m1[2][2], m2[2][2], result[2][2];
+    int i, j;
+
+    // Input for Matrix 1
+    printf("Enter The Value For The Matrix1 :\n");
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
+            scanf("%d", &m1[i][j]);
+        }
+    }
+
+    // Input for Matrix 2
+    printf("Enter The Value For The Matrix2 :\n");
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
+            scanf("%d", &m2[i][j]);
+        }
+    }
+
+    // Perform matrix addition
+    addMatrix(m1, m2, result);
+
+    // Display the result
+    printf("Result:\n");
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
+            printf("%d ", result[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
