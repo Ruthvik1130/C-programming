@@ -1,0 +1,43 @@
+v]/* NAME: RUTHVIK KUNDAR 
+BRANCH/YEAR: Computer Engineering/F.E
+UIN: 251P130
+ROLL NO: 52
+DIV: D */
+#include <stdio.h>
+
+// Function to find the largest element in an array
+int findLargest(int arr[], int n) {
+    // Assume the first element is the largest
+    int largest = arr[0];
+
+    // Iterate through the rest of the array (starting from index 1)
+    for (int i = 1; i < n; i++) {
+        // If current element is greater than the current largest, update largest
+        if (arr[i] > largest) {
+            largest = arr[i];
+        }
+    }
+    return largest;
+}
+
+int main() {
+    int n;
+    int i;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    // Declare a variable length array (VLA)
+    int arr[n];
+
+    printf("Enter %d elements:\n", n);
+    // Input array elements
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Find and print the largest element
+    printf("The largest element is: %d\n", findLargest(arr, n));
+
+    return 0;
+}
